@@ -138,19 +138,19 @@ public class MediaFinalApp extends Application {
 
                     mediaFinal = mediaFinal / notas.length;
 
-            String mediaFinalStr = String.format("%.2f", mediaFinal);
+            String mediaFinalStr = String.format("%.1f", mediaFinal);
 
             labelMediaFinal.setText("Média Final: " + mediaFinalStr);
 
             if (mediaFinal < 4) {
 
-                labelSituacao.setText("Situação: Reprovado, preste mais atenção nas aulas!!");
+                labelSituacao.setText("Situação: Reprovado");
 
             } else if (mediaFinal >= 6) {
-                labelSituacao.setText("Situação: Parabéns, você está aprovado! Não fez mais que sua obrigação.");
+                labelSituacao.setText("Situação: Aprovado");
 
             } else {
-                labelSituacao.setText("Situação: Recuperação, por pouco em!");
+                labelSituacao.setText("Situação: Recuperação");
             }
         });
 
